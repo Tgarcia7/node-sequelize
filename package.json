@@ -1,0 +1,20 @@
+{
+  "name": "node-sequelize-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=dev node index.js",
+    "debug": "DEBUG=true node index.js"
+  },
+  "author": "Tey García <tgarciamiranda@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}

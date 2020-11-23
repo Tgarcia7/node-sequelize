@@ -28,10 +28,9 @@ async function deleteOne(id) {
 
 async function updateOne(id) {
   const body = {
-    name: 'Linus', 
-    lastname: 'Torvals',
-    email: 'me@linustorvals.com',
-    password: 'fkahjdsfjsadfj'
+    name: 'Tey', 
+    lastname: 'García',
+    email: 'me@teygarcia.com'
   }
 
   const result = await UserModel.update(body, { where: { id } })

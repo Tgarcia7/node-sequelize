@@ -1,4 +1,5 @@
 'use strict'
+require('dotenv').config()
 const db = require('./models/')
 const user = require('./controllers/user');
 
@@ -9,8 +10,8 @@ const user = require('./controllers/user');
   await user.create()
   await user.deleteOne(1)
   await user.updateOne(2)
-  
   const users = await user.findAll()
   console.log(users)
+
   await db.sequelize.close()
 })()

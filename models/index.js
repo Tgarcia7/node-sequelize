@@ -1,7 +1,6 @@
 'use strict'
 const Sequelize = require('sequelize')
-const connectionString = 'mysql://tallerBilly:temp@wootit2019.cstmcmlaz2y7.us-east-1.rds.amazonaws.com/dbo'
-
+const connectionString = process.env.DB_CONN
 let sequelize = new Sequelize(connectionString, {
   logging: process.env.DEBUG
 })

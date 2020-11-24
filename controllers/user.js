@@ -20,6 +20,14 @@ async function findAll() {
   return result
 }
 
+async function login(loginEmail, loginPassword) {
+  const user = await UserModel.findOne({ where: { email: loginEmail } })
+  if (!user) return false
+  const found = await user.comparePassword(loginPassword)
+
+  return found
+}
+
 async function deleteOne(id) {
   const result = await UserModel.destroy({ where: { id } })
 
@@ -42,5 +50,6 @@ module.exports = {
   create,
   findAll,
   deleteOne,
-  updateOne
+  updateOne,
+  login
 }

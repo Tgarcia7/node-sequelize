@@ -3,10 +3,10 @@ const UserModel = require('../models/user')
 
 async function create () {
   const user = {
-    name: 'Linus', 
-    lastname: 'Torvals',
-    email: 'me@linustorvals.com',
-    password: 'khkkhk'
+    name: 'Username', 
+    lastname: 'Lastname',
+    email: 'me@user.com',
+    password: 'abcd1234'
   }
 
   const { dataValues } = await UserModel.create(user)
@@ -36,9 +36,9 @@ async function deleteOne(id) {
 
 async function updateOne(id) {
   const body = {
-    name: 'Tey', 
-    lastname: 'García',
-    email: 'me@teygarcia.com'
+    name: 'Updated', 
+    lastname: 'User',
+    email: 'me@newmail.com'
   }
 
   const result = await UserModel.update(body, { where: { id } })

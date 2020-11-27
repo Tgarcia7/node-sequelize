@@ -1,5 +1,6 @@
 'use strict'
-const UserModel = require('../models/user')
+const db = require('../models/')
+const UserModel = db.user
 
 async function create () {
   const user = {

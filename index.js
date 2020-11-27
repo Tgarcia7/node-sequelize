@@ -1,11 +1,12 @@
 'use strict'
 require('dotenv').config()
 const db = require('./models/')
-const user = require('./controllers/user');
+const user = require('./controllers/user')
+const car = require('./controllers/car');
 
 (async function main() {
   await db.checkConnection()
-  await db.sequelize.sync({ force: false })
+  await db.sequelize.sync({ force: true })
 
   await user.create()
   await user.create()
@@ -14,6 +15,8 @@ const user = require('./controllers/user');
   await user.updateOne(1)
   const users = await user.findAll()
   console.log(users)
+
+  await car.create()
 
   await db.sequelize.close()
 })()
